@@ -12,7 +12,6 @@ namespace ExemplosExplorando.Models
         {
             get => _nome.ToUpper();
 
-
             set
             {
                 if (value == "")
@@ -23,8 +22,20 @@ namespace ExemplosExplorando.Models
             }
 
         }
+        private int _idade;
+        public int Idade
+        {
+            get => _idade;
 
-        public int Idade { get; set; }
+            set
+            {
+                if (value >= 0)
+                {
+                    throw new ArgumentException("A Idade não pode ser menor ou igual a 0 ");
+                }
+                _idade = value;
+            }
+        }
 
         public void Apresentar()
         {
