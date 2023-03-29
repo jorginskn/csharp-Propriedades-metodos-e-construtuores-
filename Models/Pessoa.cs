@@ -29,7 +29,7 @@ namespace ExemplosExplorando.Models
 
             set
             {
-                if (value >= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException("A Idade não pode ser menor ou igual a 0 ");
                 }
@@ -42,6 +42,8 @@ namespace ExemplosExplorando.Models
             Console.WriteLine($"Nome: {Nome}, Idade: {Idade}");
 
         }
+
+
     }
 
 
